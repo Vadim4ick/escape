@@ -1,0 +1,84 @@
+//======================================================================
+.footer {
+  @include adaptiveValue("padding-bottom", 40, 30);
+  @include adaptiveValue("padding-top", 60, 53);
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: rem(45);
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__logo {
+  }
+
+  &__menu {
+  }
+
+  &__info {
+    padding-bottom: rem(60);
+
+    @media (min-width: $mobile) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__privacy {
+  }
+}
+
+.info-footer {
+  @media (max-width: $mobile) {
+    display: none;
+  }
+  &__body {
+  }
+
+  &__column {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+  }
+}
+.privacy-footer {
+  display: flex;
+  align-items: center;
+  gap: rem(60);
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    gap: rem(20);
+    align-items: flex-start;
+  }
+}
+
+.footer-mobile__info {
+  padding-bottom: rem(20);
+  @media (min-width: $mobile) {
+    display: none;
+  }
+}
+
+.info-footer_mobile {
+  &__row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__column {
+    display: flex;
+    justify-content: space-between;
+    padding-top: rem(20);
+  }
+}
+
+//======================================================================

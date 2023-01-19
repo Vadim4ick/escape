@@ -1,0 +1,476 @@
+.development-main {
+  @include adaptiveValue("padding-top", 250, 70);
+  position: relative;
+
+  &__container {
+  }
+
+  &__body {
+  }
+
+  &__headings {
+    @include adaptiveValue("margin-bottom", 15, 20);
+
+    h1 {
+      @media (min-width: $tablet) {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: calc(-100% - rem(35));
+          width: 100%;
+          height: rem(8);
+          background-color: $colorRed;
+
+          @media (max-width: em(1200)) {
+            left: calc(-100% - rem(5));
+          }
+        }
+      }
+    }
+  }
+
+  &__subtitle {
+    max-width: rem(803);
+    margin-bottom: rem(40);
+
+    h3 {
+      font-weight: 400;
+      @include adaptiveValue("font-size", 20, 16);
+      line-height: math.div(26, 20);
+
+      @media (max-width: $mobile) {
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__image {
+    display: table;
+    margin-left: auto;
+
+    @media (min-width: $mobile) {
+      margin-top: -150px;
+    }
+
+    @media (max-width: $tablet) {
+      margin-top: -120px;
+    }
+
+    @media (max-width: $mobile) {
+      margin-top: 0;
+      margin-top: -65px;
+    }
+  }
+
+  &__btn {
+    a {
+      font-weight: 400;
+      font-size: rem(18);
+      line-height: math.div(23, 18);
+      color: #1d1d1b;
+      cursor: pointer;
+      display: flex;
+      width: rem(175);
+      height: rem(50);
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #e21633;
+      border-radius: 9px;
+      transition: all 0.3s ease 0s;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: #fff;
+          background-color: #e21633;
+        }
+      }
+
+      @media (max-width: $mobile) {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+//===================================================================================
+
+.logos-creating {
+  &__container {
+    @media (max-width: $mobile) {
+      padding-right: 0;
+    }
+  }
+
+  &__content {
+  }
+
+  &__body {
+    @include adaptiveValue("padding-top", 165, 85);
+    @include adaptiveValue("padding-bottom", 150, 80);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(20);
+
+    @media (max-width: $mobile) {
+      gap: 0;
+    }
+  }
+
+  &__card {
+    position: relative;
+    transition: all 0.3s ease 0s;
+    min-width: rem(209);
+    min-height: rem(209);
+    border: 2px solid #000;
+    background: #000;
+    border-radius: 25px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    left: 50%;
+    transform: translate(-50%);
+
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: math.div(23, 18);
+    color: #000000;
+  }
+
+  &__info {
+    padding-left: rem(75);
+    @include adaptiveValue("padding-bottom", 140, 80);
+    position: relative;
+
+    &::after {
+      content: "";
+      background-image: url(../img/logo-development/marks.svg);
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 49px;
+      height: 44px;
+    }
+    h3 {
+      font-weight: 500;
+
+      @media (max-width: $mobile) {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.view-all {
+  &__link {
+    border: 2px solid #000000;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: rem(209);
+    min-height: rem(209);
+  }
+}
+
+@media (min-width: $mobile) {
+  .logos-creating__body.swiper-wrapper {
+    display: grid;
+  }
+}
+//===================================================================================
+
+.section-logo {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include adaptiveValue("gap", 70, 40, 1990, 768);
+    @include adaptiveValue("padding-bottom", 50, 20);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    p {
+      font-weight: 400;
+      @include adaptiveValue("font-size", 18, 16);
+      line-height: math.div(23, 18);
+      color: #000000;
+    }
+  }
+
+  &__title {
+    @media (max-width: $mobile) {
+      margin-bottom: rem(20);
+    }
+    h1 {
+      @media (min-width: $tablet) {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: calc(-100% - rem(35));
+          width: 100%;
+          height: rem(8);
+          background-color: $colorRed;
+
+          @media (max-width: em(1200)) {
+            left: calc(-100% - rem(5));
+          }
+        }
+      }
+    }
+  }
+
+  &__info_desctop {
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__info_mobile {
+    @media (min-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__slider {
+  }
+
+  &__swiper {
+  }
+
+  &__body {
+    @include adaptiveValue("padding-bottom", 150, 80);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(20);
+
+    @media (max-width: $mobile) {
+      gap: 0;
+    }
+  }
+
+  &__slide {
+  }
+
+  &__card {
+    min-width: rem(209);
+    min-height: rem(209);
+  }
+
+  &__image-ibg {
+    padding-bottom: percent(368, 368);
+    border: 2px solid #000000;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+
+  &__text {
+    padding-top: rem(10);
+    span {
+      font-weight: 400;
+      @include adaptiveValue("font-size", 18, 16);
+      line-height: math.div(23, 18);
+      color: #000000;
+    }
+  }
+}
+
+@media (min-width: $mobile) {
+  .section-logo__body.swiper-wrapper {
+    display: grid;
+  }
+}
+
+.section-logo_logo__container {
+  @media (max-width: $mobile) {
+    padding-right: 0;
+  }
+}
+//===================================================================================
+.process-page {
+  @include adaptiveValue("padding-bottom", 140, 80);
+
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 50, 20);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("gap", 25, 20);
+    @include adaptiveValue("margin-bottom", 60, 40);
+  }
+
+  &__text {
+    font-weight: 400;
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: math.div(23, 18);
+    color: #000000;
+    max-width: rem(640);
+  }
+
+  &__btn {
+    a {
+      font-weight: 400;
+      font-size: rem(18);
+      line-height: math.div(23, 18);
+      color: #1d1d1b;
+      cursor: pointer;
+      display: flex;
+      width: rem(175);
+      height: rem(50);
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #e21633;
+      border-radius: 9px;
+      transition: all 0.3s ease 0s;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: #fff;
+          background-color: #e21633;
+        }
+      }
+
+      @media (max-width: $mobile) {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+//===================================================================================
+#myCounter {
+  user-select: none;
+}
+.counter-timer {
+  @include adaptiveValue("padding-bottom", 150, 80);
+}
+.counter__title {
+  @include adaptiveValue("margin-bottom", 75, 55);
+}
+.counter-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: $mobileSmall) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.counter-group:after {
+  clear: both;
+}
+.counter-block {
+  float: left;
+  @include adaptiveValue("margin-right", 20, 10, 1990, 768);
+
+  @media (max-width: $mobile) {
+    margin-right: rem(5);
+  }
+}
+.counter-block .counter {
+  position: relative;
+  height: 147px;
+  overflow: hidden;
+
+  @media (max-width: $mobile) {
+    height: 65px;
+  }
+}
+.counter-block .counter .number {
+  padding: 1%;
+  width: 46%;
+  height: 98%;
+  color: #e21633;
+  position: absolute;
+  font-weight: 300;
+  font-size: 96px;
+  line-height: math.div(123, 96);
+  top: -10000px;
+  background: #ffffff;
+  border: 2px solid #dfdfdf;
+  border-radius: 20px;
+
+  @media (max-width: $mobile) {
+    font-size: rem(40);
+    color: #e21633;
+    border-radius: 8px;
+  }
+}
+.counter-block .counter .number.tens {
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.counter-block .counter .number.units {
+  left: 50%;
+}
+.counter-block .counter .number.hundreds {
+  display: none;
+}
+.counter-block .counter .number.show {
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.counter-block .counter .number.hidden-down {
+  top: 100%;
+}
+.counter-block .counter .number.hidden-up {
+  top: -100%;
+  z-index: 5;
+}
+.counter-block .counter.with-hundreds {
+  width: 300px;
+}
+.counter-block .counter.with-hundreds .number {
+  width: 30.66%;
+}
+.counter-block .counter.with-hundreds .number.tens {
+  left: 33.33%;
+}
+.counter-block .counter.with-hundreds .number.units {
+  left: 66.66%;
+}
+.counter-block .counter.with-hundreds .number.hundreds {
+  display: block;
+  left: 0;
+}
+.counter-block .counter-caption {
+  font-weight: 400;
+  @include adaptiveValue("font-size", 24, 14);
+  line-height: math.div(31, 24);
+  display: flex;
+  @include adaptiveValue("margin-top", 15, 10);
+  padding-right: rem(15);
+  justify-content: center;
+  color: #000000;
+}
+.counter-block:last-child {
+  @media (max-width: $mobileSmall) {
+    display: none;
+  }
+}
+//===================================================================================

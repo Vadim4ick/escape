@@ -1,0 +1,174 @@
+<div id="popup" aria-hidden="true" class="popup">
+  <div class="popup__content content-successfully">
+    <button data-close class="popup__close">
+      <img src="img/modal/close.svg" alt="" />
+    </button>
+    <div class="popup__text text-successfully">
+      <img src="img/modal/successfully.svg" alt="" />
+      <p>Ваша заявка успешно отправлена!</p>
+    </div>
+  </div>
+</div>
+
+<div id="popup2" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content content-contacts">
+      <button data-close type="button" class="popup__close">
+        <img src="img/modal/close.svg" alt="" />
+      </button>
+      <div class="popup__text text-contacts">
+        <div class="text-contacts__container">
+          <div class="text-contacts__content">
+            <div class="text-contacts__header">
+              <h3>Наши контакты</h3>
+              <p>По этим контактам вы можете связаться с нами:</p>
+            </div>
+            <div class="text-contacts__body">
+              <span>
+                <a href="tel:89181999022" target="_blank">+7 (918) 199-90-22</a>
+                <a href="mailto:esc.studio@mail.ru" target="_blank"
+                  >esc.studio@mail.ru</a
+                ></span
+              >
+              <span>
+                350049, Краснодар, <br />
+                ул. Гагарина, 112, оф. 407
+              </span>
+            </div>
+            <div class="text-contacts__footer">
+              <a
+                href="https://wa24.site/79181999022"
+                class="text-contacts__link wt"
+              >
+                <img src="img/modal-contacts/whatsapp.svg" alt="" />
+              </a>
+              <a
+                href="https://tlgg.ru/esc_design_it"
+                class="text-contacts__link tg"
+              >
+                <img src="img/modal-contacts/telegram.svg" alt="" />
+              </a>
+              <a
+                href="https://www.behance.net/escapestudiodesign"
+                class="text-contacts__link be"
+              >
+                <img src="img/modal-contacts/Be.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup3" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content form-application">
+      <button data-close type="button" class="popup__close">
+        <img src="img/modal/close.svg" alt="" />
+      </button>
+      <div class="popup__form form-application">
+        <div class="form-application__container">
+          <div class="form-application__content">
+            <div class="form-application__header">
+              <h3>Заявка</h3>
+              <p>
+                Оставьте ваши контакты и наш менеджер свяжется с вами в
+                ближайшее время
+              </p>
+            </div>
+            <div class="form-application__body">
+              <form
+                data-ajax
+                data-popup-message="#popup"
+                class="form"
+                method="post"
+                action="files/telegram.php"
+              >
+                <div class="form__container">
+                  <div class="form__item">
+                    <label class="form__label">Ваше имя</label>
+
+                    <input
+                      id="formInp1"
+                      autocomplete="off"
+                      type="text"
+                      name="name"
+                      data-required="text"
+                      data-error=""
+                      placeholder="Иван Иванов"
+                      class="form__inp input js-input"
+                    />
+                  </div>
+                  <div class="form__item">
+                    <label class="form__label">Почта</label>
+
+                    <input
+                      id="formInp2"
+                      autocomplete="off"
+                      type="email"
+                      name="email"
+                      data-required="email"
+                      data-error=""
+                      placeholder="mail@mail.ru"
+                      class="form__inp input js-input"
+                    />
+                  </div>
+                  <div class="form__item">
+                    <label class="form__label">Ваш телефон</label>
+
+                    <input
+                      id="formInp3"
+                      autocomplete="off"
+                      type="tel"
+                      name="phone"
+                      data-required="number"
+                      data-error=""
+                      placeholder="+7 (000) 000-00-00"
+                      class="form__inp input js-input"
+                    />
+                  </div>
+                  <div class="form__item">
+                    <label class="form__label">Комментарий</label>
+
+                    <input
+                      id="formInp4"
+                      autocomplete="off"
+                      type="text"
+                      name="message"
+                      data-required="text"
+                      data-error=""
+                      placeholder="Ваш комментарий"
+                      class="form__inp input js-input"
+                    />
+                  </div>
+                  <div class="form__approval">
+                    <input
+                      id="form__c1"
+                      data-error=""
+                      class="checkbox__input js-input-checkbox"
+                      type="checkbox"
+                      value="1"
+                      data-required
+                      name="form[]"
+                    />
+
+                    <label class="checkbox__label">
+                      <span class="checkbox__text"
+                        >Я согласен на обработку персональных данных</span
+                      >
+                    </label>
+                  </div>
+                  <button type="submit" class="form__button">
+                    Оставить заявку
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,428 @@
+@media (max-width: $tablet) {
+  body {
+    .menu-open & {
+      overflow: hidden;
+      touch-action: none;
+    }
+  }
+}
+
+// Заголовки, общие БЄМ блоки и проче...
+h1 {
+  font-family: "AkzidenzGroteskProEx";
+  font-weight: 400;
+  @include adaptiveValue("font-size", 64, 36);
+  line-height: math.div(82, 64);
+  color: $mainColor;
+}
+
+h2 {
+  font-family: "AkzidenzGroteskProEx";
+  font-weight: 400;
+  @include adaptiveValue("font-size", 40, 30);
+  line-height: math.div(51, 40);
+  color: $colorDark;
+}
+
+h3 {
+  font-family: "AkzidenzGroteskProEx";
+  font-weight: 400;
+  @include adaptiveValue("font-size", 24, 16);
+  line-height: math.div(31, 24);
+  color: $colorBlack;
+}
+
+.footer span {
+  font-weight: 300;
+  @include adaptiveValue("font-size", 16, 12);
+  line-height: math.div(21, 16);
+  color: $colorGray;
+}
+
+.footer .privacy-footer {
+  font-weight: 300;
+  @include adaptiveValue("font-size", 16, 12);
+  line-height: math.div(21, 16);
+  color: $colorGray;
+}
+
+.header .menu__list {
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    gap: rem(30);
+    align-items: flex-start;
+  }
+}
+
+.header .menu__body {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
+  .menu-open & {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (max-width: $tablet) {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    left: -100%;
+    overflow: auto;
+    background-color: $colorWhite;
+    padding-top: rem(155);
+    -webkit-transition: left 0.3s ease 0s;
+    -o-transition: left 0.3s ease 0s;
+    transition: left 0.3s ease 0s;
+    z-index: 4;
+
+    .menu-open & {
+      left: 0;
+    }
+  }
+}
+
+.footer .menu__list {
+  @include adaptiveValue("column-gap", 55, 40, 1920, 768);
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  background-color: #fff;
+}
+
+.content-developer__img.mobile-left {
+  img {
+    border-bottom-left-radius: 25px;
+    @media (max-width: $mobile) {
+      margin-left: -20px;
+    }
+  }
+}
+.content-developer__img.mobile-mobile .content-developer__image-ibg {
+  @media (max-width: $mobile) {
+    padding-bottom: 98.5%;
+  }
+}
+
+.tabs-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-weight: 400;
+  @include adaptiveValue("font-size", 40, 28);
+  line-height: math.div(51, 40);
+  color: #000000;
+  @include adaptiveValue("margin-bottom", 80, 30);
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    gap: rem(30);
+    align-items: flex-start;
+  }
+
+  & ._tab-active {
+    color: #e21633;
+  }
+}
+
+.footer-tabs {
+  &__title {
+    @include adaptiveValue("margin-bottom", 30, 20);
+
+    h3 {
+      display: inline;
+      border-bottom: rem(2) solid #e21633;
+      @include adaptiveValue("font-size", 24, 18);
+      color: #1d1d1b;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        border-bottom: rem(2) solid $colorDark;
+      }
+      &:active {
+        border-bottom: rem(2) solid $colorRed;
+      }
+    }
+  }
+
+  &__text {
+    p {
+      font-weight: 300;
+      @include adaptiveValue("font-size", 18, 16);
+      line-height: math.div(23, 18);
+      color: #1d1d1b;
+    }
+  }
+
+  &__link {
+    margin-top: rem(10);
+    a {
+      font-weight: 300;
+      font-size: rem(16);
+      line-height: math.div(21, 16);
+      text-decoration: underline;
+      color: #b4b4b4;
+    }
+  }
+}
+
+.portfolio__son .ab {
+  background-image: url(../img/portfolio-design/svg/ab.svg);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  transition: all 0.15s ease 0s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-image: url(../img/portfolio-design/hover/ab.svg);
+      background-repeat: no-repeat;
+      width: 133px;
+      height: 30px;
+    }
+  }
+}
+
+.portfolio__son .ps {
+  background-image: url(../img/portfolio-design/svg/ps.svg);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  transition: all 0.15s ease 0s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-image: url(../img/portfolio-design/hover/ps.svg);
+      background-repeat: no-repeat;
+      width: 181px;
+      height: 30px;
+    }
+  }
+}
+
+.portfolio__son .laptop {
+  background-image: url(../img/portfolio-design/svg/laptop.svg);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  transition: all 0.15s ease 0s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-image: url(../img/portfolio-design/hover/laptop.svg);
+      background-repeat: no-repeat;
+      width: 133px;
+      height: 30px;
+    }
+  }
+}
+
+.portfolio__son .rebranding {
+  background-image: url(../img/portfolio-design/svg/rebranding.svg);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  transition: all 0.15s ease 0s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-image: url(../img/portfolio-design/hover/rebranding.svg);
+      background-repeat: no-repeat;
+      width: 133px;
+      height: 30px;
+    }
+  }
+}
+
+.item-counter__counter.weight {
+  font-weight: 500;
+}
+
+.item-counter__counter.counter {
+  font-weight: 700;
+}
+
+.content-developer-mobile__image.mobile-left {
+  margin: 0;
+}
+
+.info-developer.one {
+  @media (min-width: $mobile) {
+    gap: rem(60);
+  }
+}
+.info-developer.two {
+  @media (min-width: $mobile) {
+    gap: rem(106);
+  }
+}
+.info-developer.three {
+  @media (min-width: $mobile) {
+    gap: rem(80);
+  }
+}
+.info-developer.four {
+  @media (min-width: $mobile) {
+    gap: rem(54);
+  }
+}
+.info-developer.five {
+  @media (min-width: $mobile) {
+    gap: rem(40);
+  }
+}
+.info-developer.six {
+  @media (min-width: $mobile) {
+    gap: rem(90);
+  }
+}
+
+#development-logo .logos-creating__card {
+  &:hover {
+    &::after {
+      content: "";
+      background: rgba(255, 255, 255, 0.5);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    .logos-creating__text {
+      display: block;
+    }
+  }
+}
+
+#branded-style.section-logo__body {
+  @media (max-width: $mobile) {
+    display: table;
+    margin: 0 auto;
+  }
+}
+
+#branded-style .section-logo__image-mobile {
+  @media (min-width: $mobile) {
+    display: none;
+  }
+
+  border: 2px solid #000000;
+  border-radius: 25px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+#branded-style .section-logo__image-ibg {
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+#branded-style .section-logo__card {
+  @media (max-width: $mobile) {
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+}
+
+#brandbook-style .section-logo__card {
+  position: relative;
+}
+
+#brandbook-style .section-logo__card .hover-text {
+  display: none;
+  position: absolute;
+  top: 50%;
+  width: 257px;
+  z-index: 5;
+  border-radius: 25px;
+  text-align: center;
+  color: #000;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (max-width: $mobileSmall) {
+    font-size: rem(14);
+    padding: 0 5px;
+  }
+}
+
+#brandbook-style .section-logo__image-ibg {
+  transition: 0.3s;
+
+  &:hover {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    & .hover-text {
+      display: block;
+    }
+  }
+}
+
+#brandbook-style .section-logo__header {
+  flex-direction: column;
+  align-items: start;
+  gap: rem(20);
+}
+
+.section-logo__text br {
+  @media (min-width: $mobile) {
+    display: none;
+  }
+}
+
+#website-development .section-logo__info p {
+  font-weight: 400;
+  font-size: rem(18);
+  line-height: math.div(23, 18);
+  color: #000000;
+}
+
+#multi-page .section-logo__header {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: rem(20);
+}
+
+#multi-page .section-logo__info {
+  max-width: rem(900);
+}
+
+#brandbook-style .section-logo__subtitle p {
+  max-width: rem(900);
+  font-weight: 400;
+  font-size: rem(18);
+  line-height: math.div(23, 18);
+  color: #000000;
+}
+
+.section-logo__info_desctop {
+  align-self: end;
+}
+
+#multi-page .section-logo__title_desctop {
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+#multi-page .section-logo__title_mobile {
+  @media (min-width: $mobile) {
+    display: none;
+  }
+}

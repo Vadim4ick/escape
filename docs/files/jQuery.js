@@ -1,0 +1,1 @@
+$((function(){const e=new Date("2022-08-20"),t=new Date,n=Math.floor((t-e)/864e5),o=new Date;o.setDate(o.getDate()+7-n%7);const a=new Date(o.setHours(0,0,0,0));a.toLocaleString("en-US");const s=new Intl.DateTimeFormat("en-US").format(a);$("#myCounter").mbComingsoon({expiryDate:new Date(s.replace(" ","T")),speed:100}),setTimeout((function(){$(window).resize()}),200)}));
